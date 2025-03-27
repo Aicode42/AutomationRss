@@ -41,7 +41,7 @@ def connect_all():
 
 @app.route('/linkedin/auth')
 def linkedin_auth():
-    redirect_uri = 'https://c678-2405-201-3009-d88a-cd7e-fe31-464-47b6.ngrok-free.app/linkedin/callback'
+    redirect_uri = 'https://automationrss.onrender.com/linkedin/callback'
     scope = 'openid profile w_member_social'
     auth_url = (
         f'https://www.linkedin.com/oauth/v2/authorization?'
@@ -59,7 +59,7 @@ def linkedin_callback():
     data = {
         'grant_type': 'authorization_code',
         'code': code,
-        'redirect_uri': 'https://c678-2405-201-3009-d88a-cd7e-fe31-464-47b6.ngrok-free.app/linkedin/callback',
+        'redirect_uri': 'https://automationrss.onrender.com/linkedin/callback',
         'client_id': LINKEDIN_CLIENT_ID,
         'client_secret': LINKEDIN_CLIENT_SECRET
     }
@@ -82,7 +82,7 @@ def linkedin_callback():
 
 @app.route('/twitter/auth')
 def twitter_auth():
-    auth = tweepy.OAuth1UserHandler(TWITTER_CLIENT_ID, TWITTER_CLIENT_SECRET, 'https://c678-2405-201-3009-d88a-cd7e-fe31-464-47b6.ngrok-free.app/twitter/callback')
+    auth = tweepy.OAuth1UserHandler(TWITTER_CLIENT_ID, TWITTER_CLIENT_SECRET, 'https://automationrss.onrender.com/twitter/callback')
     try:
         redirect_url = auth.get_authorization_url()
         session['request_token'] = auth.request_token
