@@ -15,13 +15,13 @@ app.secret_key = '12345678765'  # Replace with a secure key
 scheduler = BackgroundScheduler()
 scheduler.start()
 
-api_key = 'AIzaSyBSLWzyi9vOb-pe7-BMzK2aqQOLgR2GbEk'
+api_key = 
 agents = SocialMediaAgents(api_key)
 
-LINKEDIN_CLIENT_ID = '77ekkh40op1d8z'
-LINKEDIN_CLIENT_SECRET = 'WPL_AP1.I3swVoMMQqwi2w5P.wCYC5g=='
-TWITTER_CLIENT_ID = '6Gv4wo17VXi7rKqC15wdrFFNo'
-TWITTER_CLIENT_SECRET = '03XCJYMcjFao3cTrqqhFDERs5wVMklfyBlY2tOBhIZhZwMLWbF'
+LINKEDIN_CLIENT_ID =
+LINKEDIN_CLIENT_SECRET =
+TWITTER_CLIENT_ID =
+TWITTER_CLIENT_SECRET =
 
 posts = []
 temp_posts = {}
@@ -228,3 +228,4 @@ def scheduled_posts():
 
 if __name__ == '__main__':
     app.run(debug=True, host='127.0.0.1', port=5000)
+
